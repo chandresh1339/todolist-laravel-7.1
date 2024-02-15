@@ -87,6 +87,7 @@ class TodoController extends Controller
     public function destroy(string $id)
     {
         //dd($id);
+        //Find the id and delete it
         $todo=Todo::find($id);
         $todo->delete();
         return redirect('/')->with('success','Todo deleted suucessfully');
